@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">CookingApp</string>
+    <string name="app_name">Cooking App!</string>
+    <!-- activity_new_recipe -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="take_photo">TAKE PHOTO</string>
+    <string name="wpisz_nazw_przepisu">Wpisz nazwę przepisu</string>
+    <string name="save">save</string>
+    <!-- activity_main -->
+    <string name="my_own_recipes">MY OWN RECIPES</string>
+    <string name="sample_dinner">SAMPLE DINNER</string>
+    <string name="breakfast">BREAKFAST</string>
+    <string name="lunch">LUNCH</string>
+
 </resources>
