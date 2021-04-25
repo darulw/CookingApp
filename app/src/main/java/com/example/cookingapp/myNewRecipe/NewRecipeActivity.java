@@ -73,19 +73,23 @@ public class NewRecipeActivity extends AppCompatActivity {
             //setting the appropriate path
             FileOutputStream outStream = null;
             File dir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM) + "/myRecipes");
-            dir.mkdirs();
-            fileName = String.format("%d.jpg", System.currentTimeMillis());
-            File outFile = new File(dir, fileName);
-            try {
-                outStream = new FileOutputStream(outFile);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outStream);
+            dir.mkdir();
+                fileName = String.format("%d.jpg", System.currentTimeMillis());
+                File outFile = new File(dir, fileName);
+                try {
+                    outStream = new FileOutputStream(outFile);
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 85, outStream);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+
+
 
         }
-
     }
+
+
     /*------------------------------------------------*/
 
 
@@ -112,6 +116,8 @@ public class NewRecipeActivity extends AppCompatActivity {
             startActivityForResult(captureImage, REQUEST_PHOTO);
         } catch (ActivityNotFoundException e) {
         }
+        mImageView = (ImageView) findViewById(R.id.recipe_photo);
+
     }
     /*------------------------------------------------*/
 

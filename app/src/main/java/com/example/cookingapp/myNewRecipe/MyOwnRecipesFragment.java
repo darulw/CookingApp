@@ -42,7 +42,7 @@ public class MyOwnRecipesFragment extends Fragment {
         super.onCreate(savedInstanceState);
         //get permissions
         if (Recipe.getPermission() == 0) {
-            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUESTCODE);
+            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUESTCODE);
             Recipe.setPermission(1);
         }
         setHasOptionsMenu(true);
